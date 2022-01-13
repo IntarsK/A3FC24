@@ -62,19 +62,20 @@ function generateNumber() {
     return Math.round(Math.random() * 1000);
 }
 
-let size = 1000;
+let size = 10;
 
-for (let i = 1; i <= size; i++) {
-    for (let j = 1; j <= size; j++) {
+for (let i = 0; i <= size; i++) {
+    for (let j = 0; j <= size; j++) {
         matrix.push(generateNumber());
     }
 }
 
 let sum = 0;
+let validIndex = [];
 
 matrix.forEach(function (int, index) {
     // Get diagnal n + 1
-    
+
     // * 0 0
     // 0 * 0
     // 0 0 *
@@ -83,11 +84,11 @@ matrix.forEach(function (int, index) {
     }
 
     // Gets Reverse diagnal n - 1
-    
+
     // 0 0 *
     // 0 * 0
     // * 0 0 
-    if (index > 0 && index % (size - 1) == 0) {
+    if (index == size && index % (size - 1) == 0) {
         sum += int;
     }
 });

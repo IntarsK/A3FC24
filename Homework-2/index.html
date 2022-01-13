@@ -136,7 +136,7 @@
                         return Math.round(Math.random() * 1000);
                     }
                     
-                    let size = 1000;
+                    let size = 10;
                     
                     for (let i = 1; i <= size; i++) {
                         for (let j = 1; j <= size; j++) {
@@ -154,6 +154,7 @@
                         // 0 0 *
                         if (index % (size + 1) == 0) {
                             sum += int;
+                            matrix[index] = '*';
                         }
                     
                         // Gets Reverse diagnal n - 1
@@ -161,11 +162,13 @@
                         // 0 0 *
                         // 0 * 0
                         // * 0 0 
-                        if (index > 0 && index % (size - 1) == 0) {
+                        if (index == size && index % (size - 1) == 0) {
                             sum += int;
+                            matrix[index] = '*';
                         }
                     });
                     
+                    console.table(matrix);
                     console.log(sum);
                 </pre>
             </div>
