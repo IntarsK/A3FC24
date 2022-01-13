@@ -22,34 +22,74 @@ function sort(array, type) {
     return array;
 }
 
-console.log(sort(numbers,'asc')); 
-console.log(sort(numbers,'desc'));
+console.log(sort(numbers, 'asc'));
+console.log(sort(numbers, 'desc'));
 
 
 // Level 2
 
 let numbers_two = [];
 
-for (let i=0; i<=1000; i++){
+for (let i = 0; i <= 1000; i++) {
     numbers_two.push(generateNumber());
 }
 
-function sort(array, type){
-    array.sort(function(a,b){
+function sort(array, type) {
+    array.sort(function (a, b) {
         return a - b;
     });
 
-    if (type === 'desc'){
+    if (type === 'desc') {
         array.reverse();
     }
 
     return array;
 }
 
-function generateNumber(){
+function generateNumber() {
     return Math.round(Math.random() * 1000);
 }
 
 
-console.log(sort(numbers_two,'asc'));
-console.log(sort(numbers_two,'desc'));
+console.log(sort(numbers_two, 'asc'));
+console.log(sort(numbers_two, 'desc'));
+
+
+// Level 3
+
+let matrix = [];
+function generateNumber() {
+    return Math.round(Math.random() * 1000);
+}
+
+let size = 1000;
+
+for (let i = 1; i <= size; i++) {
+    for (let j = 1; j <= size; j++) {
+        matrix.push(generateNumber());
+    }
+}
+
+let sum = 0;
+
+matrix.forEach(function (int, index) {
+    // Get diagnal n + 1
+    
+    // * 0 0
+    // 0 * 0
+    // 0 0 *
+    if (index % (size + 1) == 0) {
+        sum += int;
+    }
+
+    // Gets Reverse diagnal n - 1
+    
+    // 0 0 *
+    // 0 * 0
+    // * 0 0 
+    if (index > 0 && index % (size - 1) == 0) {
+        sum += int;
+    }
+});
+
+console.log(sum);
