@@ -88,7 +88,7 @@ matrix.forEach(function (int, index) {
     // 0 0 *
     // 0 * 0
     // * 0 0 
-    if (index == size && index % (size - 1) == 0) {
+    if (index == size || index % (size - 1) == 0) {
         sum += int;
     }
 });
