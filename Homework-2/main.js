@@ -19,7 +19,7 @@ function sort(array, type) {
             }
         }
     }
-    return numbers;
+    return array;
 }
 
 console.log(sort(numbers,'asc')); 
