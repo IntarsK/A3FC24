@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <meta charset="utf-8">
+    <title>Homework #2</title>
+    <script src="main.js"></script>
+    <script src="ui.js"></script>
+    <script src="confetti.js"></script>
+    <script>hljs.highlightAll()</script>
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div class="container">
+        <div class="container">
+            <div class="row">
+                <h1>Homework 2</h2>
+            </div>
+            <div class="row">
+                <div class="info-block">
+                    <pre>
+                    <code class="language-javascript">
+                        // Would need to sort values in array ascending order and descending order
+                        let numbers = [4,5,6,10,14,3,2,5,6,7,99]; // [2, 3, 4, 5, 5, 6, 6, 7, 10, 14, 99]
+
+                        // Advanced level
+                        // Create loop that will generate array of 1000 numbers using math libery
+                        // (Math.round(Math.random() * 1000));
+                        // Output will be integers from 0 to 1000
+                        // Would need to sort values in array ascending order and descending order
+
+                        // Hacker level dificulty
+                        // Generate 2D array (x,y) where X and Y is Random value from 0 to 1000
+                        // Get sum of both diagnal
+
+                        // Example of 2D array (x,y) Where x and y is 0 to 1 and 0 to 2 
+                        // (Example values are not random)
+                        
+                        // [1][2]
+                        // [3][4]
+
+                        // sum = 5 + 5
+
+                        //[3][5][6]
+                        //[2][1][9]
+                        //[6][2][2]
+
+                        // sum = (3 + 2 + 1) + (6 + 1 + 6)
+                    </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <h1>Solution</h2>
+        </div>
+        <div class="row">
+            <div class="info-block">
+                <pre>
+                <code class="language-javascript">
+                    // Level 1
+                    let numbers = [4, 5, 6, 10, 14, 3, 2, 5, 6, 7, 99];
+                    
+                    function sort(array, type) {
+                        for (let i = 0; i < 11; i++) {
+                            for (let j = 0; j < 11; j++) {
+                                if (type === 'asc') {
+                                    if (array[j] > array[j + 1]) {
+                                        let temp = array[j];
+                                        array[j] = array[j + 1];
+                                        array[j + 1] = temp;
+                                    }
+                                } else {
+                                    if (array[j] < array[j + 1]) {
+                                        let temp = array[j];
+                                        array[j] = array[j + 1];
+                                        array[j + 1] = temp;
+                                    }
+                                }
+                            }
+                        }
+                        return numbers;
+                    }
+                    
+                    console.log(sort(numbers,'asc')); 
+                    console.log(sort(numbers,'desc'));
+                    
+                    
+                    // Level 2
+                    
+                    let numbers_two = [];
+                    
+                    for (let i=0; i<= 1000; i++){
+                        numbers_two.push(generateNumber());
+                    }
+                    
+                    function sort(array, type){
+                        array.sort(function(a,b){
+                            return a - b;
+                        });
+                    
+                        if (type === 'desc'){
+                            array.reverse();
+                        }
+                    
+                        return array;
+                    }
+                    
+                    function generateNumber(){
+                        return Math.round(Math.random() * 1000);
+                    }
+                    
+                    
+                    console.log(sort(numbers_two,'asc'));
+                    console.log(sort(numbers_two,'desc'));
+                    
+                </pre>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

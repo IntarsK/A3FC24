@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <meta charset="utf-8">
+    <title>Lesson 2</title>
+    <script src="main.js"></script>
+    <script src="ui.js"></script>
+    <script>hljs.highlightAll()</script>
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>Lesson 2</h1>
+        </div>
+        <div class="row">
+            <h2>Basics of statements and loops</h2>
+        </div>
+        <div class="row">
+            <div class="info-block">
+                <div class="info-header">
+                </div>
+                <pre>
+                <code class="language-javascript">
+                    const condition = false;
+
+                    if (condition){
+                        console.log('condition was true');
+                    }
+
+
+                    if (condition){
+                        console.log('condition was true');
+                    } else {
+                        console.log('condition was false');
+                    }
+
+                </code>
+            </pre>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <h2>Task 1</h2>
+        </div>
+        <div class="row">
+            <div class="info-block">
+                <div class="info-header">
+                    <p>Create basic application that can destiguesh between day or nigh when time is given</p>
+                </div>
+                <pre>
+                <code class="language-javascript">
+                    if (time > 0 && time <=12)
+                    {
+                        console.log('Morning');
+                    }
+
+                    if (time ? ? && ? ? ?)
+                    {
+                        console.log('Afternoon');
+                    }
+
+                    if (time ? ? && ? ? ?)
+                    {
+                        console.log('Evening');
+                    }
+
+                    if (time > ?)
+                    {
+                        console.log('Time is invalid');
+                    }
+                </code>
+            </pre>
+                <button type="button">I need help</button>
+                <div class="answer" style="display: none;">
+                    <pre>
+                        <code class="language-javascript">
+                            //let time = 10;
+                            //let time = 15;
+                            //let time = 19;
+                            let time = 34;
+
+                            if (time > 0 && time <= 12)
+                            {
+                                console.log('Morning');
+                            }
+        
+                            if (time > 12 && time <= 17)
+                            {
+                                console.log('Afternoon');
+                            }
+        
+                            if (time > 17 && time <= 24)
+                            {
+                                console.log('Evening');
+                            }
+
+                            if (time > 24)
+                            {
+                                console.log('Time is invalid');
+                            }
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <h2>Task 2</h2>
+        </div>
+        <div class="row">
+            <div class="info-block">
+                <div class="info-header">
+                    <p>Create if else example</p>
+                </div>
+                <pre>
+                <code class="language-javascript">
+                    if (?){
+                        console.log(?);
+                    } else{
+                        console.log(?);
+                    }  
+                </code>
+            </pre>
+                <button type="button">I need help</button>
+                <div class="answer" style="display: none;">
+                    <pre>
+                    <code class="language-javascript">
+                        const animal = 'dog';
+
+                        if (animal == 'dog'){
+                            console.log('bark');
+                        } else {
+                            console.log('not bark');
+                        }
+                    </code>
+                </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <h2>Arrays</h2>
+        </div>
+        <div class="row">
+            <div class="info-block">
+                <pre>
+                <code class="language-javascript">
+                    const fruites = ['apple','orange','banna'];
+
+                    console.log(fruites);    //['apple','orange','banna']
+                    console.log(fruites[1]); //'orange'
+                    console.log(fruites[2]); //'banna'
+
+                    fruites.push('lemon');
+                    console.log(fruites)     //['apple','orange','banna','lemon'];
+                    fruites.pop();
+                    fruites.pop();
+                    console.log(fruites)     //['apple','orange']
+
+                    let fruites = ['orange','banana','apple'];
+                    fruites = fruites.slice(0,2); // ["apple", "banana"]
+                </code>
+            </pre>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <h2>Task 3</h2>
+        </div>
+        <div class="row">
+            <div class="info-block">
+                <div class="info-header">
+                    <p>What will console return ?</p>
+                </div>
+                <pre>
+                <code class="language-javascript">
+                    const fruites = ['lime','apple','apple','orange','banna'];
+                    console.log(fruites[3]);
+                </code>
+            </pre>
+                <button type="button">I need help</button>
+                <div class="answer" style="display: none;">
+                    <pre>
+                    <code class="language-javascript">
+                        //'orange'
+                    </code>
+                </pre>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h2>Task 4</h2>
+        </div>
+        <div class="row">
+            <div class="info-block">
+                <div class="info-header">
+                    <p>What will console return ?</p>
+                </div>
+                <pre>
+                <code class="language-javascript">
+                    const fruites = ['lime','apple','apple','orange','banna'];
+                    fruites.pop();
+
+                    console.log(fruites[4]);
+                </code>
+            </pre>
+                <button type="button">I need help</button>
+                <div class="answer" style="display: none;">
+                    <pre>
+                    <code class="language-javascript">
+                        // undefined
+                    </code>
+                </pre>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">z
+                <h2>Loops For/While</h2>
+            </div>
+            <div class="row">
+                <div class="info-block">
+                    <pre>
+                    <code class="language-javascript">
+                        console.log(1);
+                        console.log(2);
+                        console.log(3);
+                        console.log(4);
+                        console.log(5);
+
+                        for (let i=1; i<=5; i++){
+                            console.log(i);
+                        }
+                    
+                        let i = 0;
+                    
+                        while (i < 5){
+                            i++;
+                            console.log(i);
+                        }
+                    </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h2>Task 5</h2>
+        </div>
+        <div class="row">
+            <div class="info-block">
+                <div class="info-header">
+                    <p>Get sum of all variables from 0 to 100 (1+2+3+4+5...98+99+100)</p>
+                </div>
+                <pre>
+                <code class="language-javascript">
+                    let sum = 0;
+                    for (let i = 0; i ? 100; i++){
+                        sum = ? + i;
+                    }
+
+                    console.log(sum);
+                </code>
+            </pre>
+                <button type="button">I need help</button>
+                <div class="answer" style="display: none;">
+                    <pre>
+                    <code class="language-javascript">
+                        let sum = 0;
+                        for (let i = 0; i <= 100; i++){
+                            sum = sum + i;
+                        }
+                        console.log(sum);
+                    </code>
+                </pre>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="info-block">
+                <div class="info-header">
+                    <p>Write same statement using while loop</p>
+                </div>
+                <pre>
+                <code class="language-javascript">
+                    let sum = 0;
+
+                    ?
+
+                    console.log(sum);
+                </code>
+            </pre>
+                <button type="button">I need help</button>
+                <div class="answer" style="display: none;">
+                    <pre>
+                    <code class="language-javascript">
+                        let i = 0;
+                        let sum = 0;
+
+                        while (i <= 99){
+                            i++;
+                            sum = sum + i;
+                        }
+
+                        console.log(sum);
+                    </code>
+                </pre>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <h2>Foreach loop</h2>
+            </div>
+            <div class="row">
+                <div class="info-block">
+                    <pre>
+                    <code class="language-javascript">
+                        // Foreach loops loop through arrays and foreach item can execute code
+                        
+                        const fruites = ['apple','orange','lime'];
+
+                        fruites.forEach(function(item){
+                            console.log(item + '-cool-');
+                            // 'apple-cool-'
+                            // 'orange-cool-'
+                            // 'lime-cool-'
+                        });
+
+                        const numbers = [1,2,3,4,5,6,7,8,9,10,12,15,16];
+                        const evenNumbers = [];
+                        const oddNumbers = [];
+                        numbers.forEach(function(item){
+                            if(item % 2 === 0){
+                                oddNumbers.push(item);
+                            }else{
+                                evenNumbers.push(item);
+                            }
+                        });
+
+                        console.log(oddNumbers);  //[2, 4, 6, 8, 10, 12, 16]
+                        console.log(evenNumbers); //[1, 3, 5, 7, 9, 15]
+                    </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <h2>Homework</h2>
+            </div>
+            <div class="row">
+                <div class="info-block">
+                    <pre>
+                    <code class="language-javascript">
+                        // Would need to sort values in array ascending order and descending order
+                        let numbers = [4,5,6,10,14,3,2,5,6,7,99]; // [2, 3, 4, 5, 5, 6, 6, 7, 10, 14, 99]
+
+                        // Advanced level
+                        // Create loop that will generate array of 1000 numbers using math libery
+                        // (Math.round(Math.random() * 1000));
+                        // Output will be integers from 0 to 1000
+                        // Would need to sort values in array ascending order and descending order
+
+                        // Hacker level dificulty
+                        // Generate 2D array (x,y) where X and Y is Random value from 0 to 1000
+                        // Get sum of both diagnal
+
+                        // Example of 2D array (x,y) Where x and y is 0 to 1 and 0 to 2 
+                        // (Example values are not random)
+                        
+                        // [1][2]
+                        // [3][4]
+
+                        // sum = 5 + 5
+
+                        //[3][5][6]
+                        //[2][1][9]
+                        //[6][2][2]
+
+                        // sum = (3 + 2 + 1) + (6 + 1 + 6)
+                    </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

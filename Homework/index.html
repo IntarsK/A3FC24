@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <meta charset="utf-8">
+    <title>Homework #1</title>
+    <script src="main.js"></script>
+    <script src="ui.js"></script>
+    <script src="confetti.js"></script>
+    <script>hljs.highlightAll()</script>
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div class="container">
+        <div class="container">
+            <div class="row">
+                <h1>Homework</h2>
+            </div>
+            <div class="row">
+                <div class="info-block">
+                    <pre>
+                    <code class="language-javascript">
+                        // Would need to make a basic calculator in main.js
+                        // Calculator can add, subtract, devide, multiply two numbers
+                        // Numbers can be float or integers
+
+                        // Hint
+                        function add(?,?)
+                        function sub(?,?)
+                        function devide(?,?)
+                        function multiply(?,?)
+
+
+                        // Expected outcome and their results
+                        console.log(add(10, 10))        // 20
+                        console.log(add(5, 5))          // 10
+
+                        console.log(sub(10, 10))        // 0
+                        console.log(sub(5, 1))          // 4
+
+                        console.log(devide(10, 10))     // 1
+                        console.log(devide(5, 3))       // 1.6666666666666667
+
+                        console.log(multiply(10, 10))   // 100
+                        console.log(multiply(5, 1))     // 5
+
+                        // Advanced level
+
+                        // Using google, etc. You must make sure that
+                        // Both arguments of the function is a number or float
+                        console.log(add('a', 'b'))      // Arguemnts are invalid
+                        // Must not return result 'ab'
+
+                        // Hacker level dificulty
+                        // Clicking on "I need help", confety will appear
+                    </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <h1>Solution</h2>
+        </div>
+        <div class="row">
+            <div class="info-block">
+                <pre>
+                <code class="language-javascript">
+                    // Level 1
+                    function add(a, b) {
+                        return a + b;
+                    }
+                    
+                    function sub(a, b) {
+                        return a - b;
+                    }
+                    
+                    function devide(a, b) {
+                        return a / b;
+                    }
+                    
+                    function multiply(a, b) {
+                        return a * b;
+                    }
+                    
+                    // Expected outcome and their results
+                    console.log(add(10, 10))        // 20
+                    console.log(add(5, 5))          // 10
+                    
+                    console.log(sub(10, 10))        // 0
+                    console.log(sub(5, 1))          // 4
+                    
+                    console.log(devide(10, 10))     // 1
+                    console.log(devide(5, 3))       // 1.6666666666666667
+                    
+                    console.log(multiply(10, 10))   // 100
+                    console.log(multiply(5, 1))     // 5
+                    
+                    
+                    // Level 2
+                    
+                    function validate(a, b) {
+                    
+                        let isValid = typeof a == 'number' && typeof b == 'number';
+                    
+                        if (isValid){
+                            return isValid;
+                        }
+                        
+                        console.log('Arguemnts are invalid');
+                        
+                        return isValid;
+                    }
+                    
+                    function add(a, b) {
+                    
+                        if (validate(a,b)){
+                            return a + b;
+                        }
+                    }
+                    
+                    function sub(a, b) {
+                    
+                        if (validate(a,b)){
+                            return a - b;
+                        }
+                    }
+                    
+                    function devide(a, b) {
+                    
+                        if (validate(a,b)){
+                            return a / b;
+                        }
+                    }
+                    
+                    function multiply(a, b) {
+                    
+                        if (validate(a,b)){
+                            return a * b;
+                        }
+                    }
+                    
+                    // Expected outcome and their results
+                    console.log(add(10, 10))        // 20
+                    console.log(add(5, 5))          // 10
+                    
+                    console.log(sub(10, 10))        // 0
+                    console.log(sub(5, 1))          // 4
+                    
+                    console.log(devide(10, 10))     // 1
+                    console.log(devide(5, 3))       // 1.6666666666666667
+                    
+                    console.log(multiply(10, 10))   // 100
+                    console.log(multiply(5, 1))     // 5
+                    
+                    console.log(add('a', 'b'))      // Arguemnts are invalid
+                </code>
+                </pre>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <h1>Level 3</h2>
+        </div>
+        <div id="confetti"></div>
+        <div class="row">
+            <div class="info-block" style="z-index: 100;" >
+                <button type="button">I need help</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
