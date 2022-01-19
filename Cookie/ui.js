@@ -6,7 +6,5 @@ $(document).ready(() => {
         maxScale: 1500,
         speed: 6,
         hoverOnly: true
-    })
-
-    
+    });
 });

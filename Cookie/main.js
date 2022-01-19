@@ -16,11 +16,16 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 
 function updateRender() {
+    let moneySelector = document.querySelector('.money-output');
+    moneySelector.innerHTML = money;
+
+    let upgradeCostSelector = document.querySelector('.upgrade-cost');
+    upgradeCostSelector.innerHTML = upgradeCost;
 }
 
 function click() {
 }
 
 function upgrade() {
-
+    
 }
