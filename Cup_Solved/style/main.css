@@ -1,0 +1,112 @@
+/*
+#22577E - dark 
+#5584AC - med
+#95D1CC - light
+#F6F2D4 - contrast
+*/
+
+body{
+    background: url("../img/back.png") 100% 100% no-repeat no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+
+.blur{
+    background: url("../img/back.png") 100% 100% no-repeat no-repeat;
+    background-size: 100% 100%;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    z-index: -100;
+    position: absolute;
+    filter: blur(5px);
+}
+
+.cookie {
+    background: url("../img/cookie.png") 100% 100% no-repeat no-repeat;
+    background-size: 100% 100%;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    transition: transform .2s;
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
+    cursor: pointer;
+}
+
+.cookie,
+.upgrade{
+    z-index: 1000;
+}
+
+.money{
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.upgrade{
+    width: 50%;
+    margin: auto;
+    background: rgb(148,83,47);
+    background: radial-gradient(circle, rgba(148,83,47,1) 0%, rgba(148,83,47,1) 35%, rgba(225,152,72,1) 100%);
+    border-radius: 2px;
+    padding: 5px;
+    transition: transform .2s;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    bottom: 50px;
+    left: calc(50% - 150px);
+}
+
+
+.upgrade:hover{
+    transform: scale(1.05);
+    filter: drop-shadow(2px);
+}
+
+.upgrade:active{
+    transform: scale(.75);
+}
+
+
+.cookie:hover{
+    animation-name: spin;
+    animation-duration: 50000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+    transform: scale(1.25);
+}
+
+.cookie:active{
+    transform: scale(.75);
+}
+
+
+.global-wrapper{
+    z-index: 1000;
+    width: 600px;
+    margin: 200px auto;
+}
+
+.money{
+    width: 100%;
+    text-align: center;
+    padding: 50px 0;
+}
+
+span{
+    color: #fff;
+    font-size: 40px;
+    font-family: 'Merriweather', serif;
+    transition: --num 1s;
+}
+
+.wrapper{
+    position: relative;
+    z-index: 99;
+    background: url("../img/back.png") 100% 100% no-repeat no-repeat;
+    background-size: 100% 100%;
+    width: 600px;
+    height: 600px;
+}

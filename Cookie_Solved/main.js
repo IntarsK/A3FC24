@@ -1,6 +1,7 @@
 var money = 0;
 var modifier = 1;
 var upgradeCost = 10;
+var scale = 1000;
 
 function init() {
     updateRender();
@@ -24,17 +25,27 @@ function updateRender() {
 }
 
 function click() {
-    money = Math.round(money + modifier);
+    money += modifier;
+    money = Math.round(money);
     updateRender();
 }
 
 function upgrade() {
-    if(money >= upgradeCost){
-        modifier *= 1.2;
-        money= money - upgradeCost
-        upgradeCost = upgradeCost * modifier;
-        updateRender();
-    }else {
-        alert('Par maz naudas');
+    if (money >= upgradeCost) {
+        modifier = modifier + 1.5;
+        money -= upgradeCost;
+        upgradeCost *= 2;
+        scale *= 2;
+
+        $('.wrapper').confettiButton({
+            minScale: scale,
+            maxScale: scale,
+            speed: 6
+        })
+
+    } else {
+        console.log('Not enought money');
     }
+
+    updateRender();
 }
